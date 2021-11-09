@@ -4,7 +4,9 @@ A Chrome extension for extending GitHub's features.
 Currently only provides a button to create a linked issue in another repository, and automatically add a task list item to the current issue.
 
 ## Getting Started
+If you just want to get up and running, [See the releases section](https://github.com/devmatics/devmatics-github-extension/releases)
 
+If you want to play around with the code:
 1. `npm install`
 2. `npm install --global yarn` (only needed if you haven't globalled yarn yet)
 3. `yarn build`
