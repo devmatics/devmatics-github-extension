@@ -1,0 +1,71 @@
+<div class="discussion-sidebar-item">
+	<button class="discussion-sidebar-heading discussion-sidebar-toggle js-menu-target devmatics-sidebar-header">
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-gear">
+            <path fill-rule="evenodd" d="M7.429 1.525a6.593 6.593 0 011.142 0c.036.003.108.036.137.146l.289 1.105c.147.56.55.967.997 1.189.174.086.341.183.501.29.417.278.97.423 1.53.27l1.102-.303c.11-.03.175.016.195.046.219.31.41.641.573.989.014.031.022.11-.059.19l-.815.806c-.411.406-.562.957-.53 1.456a4.588 4.588 0 010 .582c-.032.499.119 1.05.53 1.456l.815.806c.08.08.073.159.059.19a6.494 6.494 0 01-.573.99c-.02.029-.086.074-.195.045l-1.103-.303c-.559-.153-1.112-.008-1.529.27-.16.107-.327.204-.5.29-.449.222-.851.628-.998 1.189l-.289 1.105c-.029.11-.101.143-.137.146a6.613 6.613 0 01-1.142 0c-.036-.003-.108-.037-.137-.146l-.289-1.105c-.147-.56-.55-.967-.997-1.189a4.502 4.502 0 01-.501-.29c-.417-.278-.97-.423-1.53-.27l-1.102.303c-.11.03-.175-.016-.195-.046a6.492 6.492 0 01-.573-.989c-.014-.031-.022-.11.059-.19l.815-.806c.411-.406.562-.957.53-1.456a4.587 4.587 0 010-.582c.032-.499-.119-1.05-.53-1.456l-.815-.806c-.08-.08-.073-.159-.059-.19a6.44 6.44 0 01.573-.99c.02-.029.086-.075.195-.045l1.103.303c.559.153 1.112.008 1.529-.27.16-.107.327-.204.5-.29.449-.222.851-.628.998-1.189l.289-1.105c.029-.11.101-.143.137-.146zM8 0c-.236 0-.47.01-.701.03-.743.065-1.29.615-1.458 1.261l-.29 1.106c-.017.066-.078.158-.211.224a5.994 5.994 0 00-.668.386c-.123.082-.233.09-.3.071L3.27 2.776c-.644-.177-1.392.02-1.82.63a7.977 7.977 0 00-.704 1.217c-.315.675-.111 1.422.363 1.891l.815.806c.05.048.098.147.088.294a6.084 6.084 0 000 .772c.01.147-.038.246-.088.294l-.815.806c-.474.469-.678 1.216-.363 1.891.2.428.436.835.704 1.218.428.609 1.176.806 1.82.63l1.103-.303c.066-.019.176-.011.299.071.213.143.436.272.668.386.133.066.194.158.212.224l.289 1.106c.169.646.715 1.196 1.458 1.26a8.094 8.094 0 001.402 0c.743-.064 1.29-.614 1.458-1.26l.29-1.106c.017-.066.078-.158.211-.224a5.98 5.98 0 00.668-.386c.123-.082.233-.09.3-.071l1.102.302c.644.177 1.392-.02 1.82-.63.268-.382.505-.789.704-1.217.315-.675.111-1.422-.364-1.891l-.814-.806c-.05-.048-.098-.147-.088-.294a6.1 6.1 0 000-.772c-.01-.147.039-.246.088-.294l.814-.806c.475-.469.679-1.216.364-1.891a7.992 7.992 0 00-.704-1.218c-.428-.609-1.176-.806-1.82-.63l-1.103.303c-.066.019-.176.011-.299-.071a5.991 5.991 0 00-.668-.386c-.133-.066-.194-.158-.212-.224L10.16 1.29C9.99.645 9.444.095 8.701.031A8.094 8.094 0 008 0zm1.5 8a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM11 8a3 3 0 11-6 0 3 3 0 016 0z"></path>
+        </svg>
+        Devmatics GitHub Tools
+    </button>
+	<div class="devmatics-loading">
+		<p class="small">The extension is loading...</p>
+	</div>
+	<div class="btn-group devmatics-no-token" style="display:none;">
+		<button class="btn btn-sm color-text-white color-bg-info-inverse btn-block devmatics-no-token-button">Setup GitHub Token</button>
+		<p class="small">You must setup a GitHub Personal Access Token with the extension before any features can be used.</p>
+	</div>
+	<div class="btn-group devmatics-bad-token" style="display:none;">
+		<button class="btn btn-sm btn-danger btn-block devmatics-bad-token-button">Invalid GitHub Token</button>
+		<p class="small">
+			The saved GitHub Personal Access Token is invalid or expired: <strong><span class="devmatics-bad-token-details"></span></strong>
+		</p>
+	</div>
+	<div class="btn-group devmatics-has-token" style="display:none;">
+		<button class="btn btn-sm btn-primary btn-block devmatics-create-linked-issue-open" >Create Linked Issue</button>
+		<p class="small">
+			Authenticated as: <strong><span class="devmatics-has-token-user"></span></strong>
+			<span class="devmatics-has-token-org"><br/>Using Organization: <strong><span class="devmatics-has-token-org-name"></span></strong></span>
+		</p>
+	</div>
+</div>
+<dialog id="createLinkedIssueDialog" class="devmatics-dialog" style="width: 100%; height: 100vh;">
+	<div class="Box Box--overlay">
+		<div class="Box-header">
+			<button class="Box-btn-octicon btn-octicon float-right devmatics-create-linked-issue-close" type="button" aria-label="Close dialog">
+			  	<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+					<path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+				</svg>
+			</button>
+			<h3 id="transfer-dialog-title" class="Box-title">
+				Create Linked Issue
+			</h3>
+		</div>
+		<div class="Box-body p-3">
+			<h5 style="margin-top: 16px;">Settings</h5>
+			<input type="checkbox" id="use-org-name" checked/>
+			<label for="use-org-name"><span class="text-normal">Search org: </span><span class="devmatics-has-token-org-name"></span></label><br/>
+			<input type="checkbox" id="only-this-owner"/>
+			<label for="only-this-owner"><span class="text-normal">Only my own repos: </span><span class="devmatics-has-token-user"></span></label>
+			<h5 style="margin-top: 16px;">Destination Repository</h5>
+			<details class="details-reset details-overlay select-menu devmatics-create-linked-issue-menu">
+				<summary role="button" class="select-menu-button btn devmatics-create-linked-issue-selected" aria-haspopup="menu">
+					Choose a repository
+				</summary>
+				<details-menu class="select-menu-modal position-absolute" style="z-index: 99;" role="menu">
+					<div class="select-menu-header">
+						<span class="select-menu-title">Repositories</span>
+					</div>
+					<div class="select-menu-filters p-2">
+						<input type="text" class="form-control devmatics-create-linked-issue-search" style="width:100%;" placeholder="Find a repository" autofocus autocomplete="off" spellcheck="false"/>
+					</div>
+					<div class="select-menu-list devmatics-create-linked-issue-repo-results">
+						<p class="m-3">Search Repositories. Standard GitHub Search parameters are available.</p>
+					</div>
+				</details-menu>
+			</details>
+			<h5 style="margin-top: 16px;">Issue Name</h5>
+			<input type="text" class="form-control devmatics-create-linked-issue-name" style="width:100%;" placeholder="Please enter a name" autocomplete="off" spellcheck="false"/>
+		</div>
+		<div class="p-3">
+			<button disabled class="btn btn-block btn-primary devmatics-create-linked-issue-button" data-repo="">Create Linked Issue</button>
+		</div>
+	</div>
+</dialog>
