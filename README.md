@@ -12,9 +12,6 @@ If you want to play around with the code:
 3. `yarn build`
 4. Load the `build` folder as an unpacked extension in Chrome.
 
-## Notes
-Note that due to the way GitHub caches pages, you may need to open an issues page, and refresh the page again in order for this extension to be loaded.
-
 ## Screenshots
 
 #### The Sidebar interface
