@@ -1,6 +1,6 @@
 {
   "name": "devmatics-github-extension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Internal extension for github tools and extensions",
   "scripts": {
     "build": "node utils/build.js",
