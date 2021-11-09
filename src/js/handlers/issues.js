@@ -4,12 +4,34 @@ var orgName = '';
 var userName = '';
 
 // Timeout for search entry in modal to not hammer the api with every letter
+var loadPageTimeout;
 var searchEntryTimeout;
 
-// Only run init once
+// Only run init once per load
 if (!initRun) {
 	initRun = true;
-	loadSidebar();
+
+	let url = window.location.href;
+	const urlArray = url.split('/');
+	const currentRepo = urlArray[4];
+	const repoOwner = urlArray[3];
+
+	// only proceed if this is not a PR page or a new issue
+	if (url.indexOf(`${repoOwner}/${currentRepo}/compare/`) < 0 &&
+		url.indexOf(`${repoOwner}/${currentRepo}/pull/`) < 0 &&
+		url.indexOf(`${repoOwner}/${currentRepo}/issues/new`) < 0)
+	{
+		// Give github a chance to load since its a SPA internall
+		loadPageTimeout = setTimeout(() => {
+			clearTimeout(loadPageTimeout);
+
+			// if our content isn't already here
+			if ($('.devmatics-issues-sidebar').length === 0)
+			{
+				loadSidebar();
+			}
+		}, 1000);
+	}	
 }
 
 function loadSidebar() {
