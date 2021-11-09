@@ -1,0 +1,30 @@
+{
+  "name": "Devmatics Github Extensions",
+  "options_page": "options.html",
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-34.png"
+  },
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js 'unsafe-eval'; object-src 'self' https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js",
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*/*/issues/*"],
+      "exclude_matches": ["*://github.com/*/*/issues"],
+      "js": ["issues.bundle.js"],
+      "css": ["css/injected.css"],
+      "run_at": "document_end" 
+    }
+  ],
+  "web_accessible_resources": [
+    "templates/*.html",
+    "css/*.css"
+  ],
+  "permissions": ["tabs", "background", "storage", "webNavigation", "*://github.com/*"]
+}

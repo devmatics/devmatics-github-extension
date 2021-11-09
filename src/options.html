@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Devmatics Github Extension Settings</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2 class="text-center">Devmatics Github Extension Settings</h2>
+    </header>
+    <div class="card mx-auto" style="max-width:600px;">
+      <div class="card-body">
+        <h4 class="card-title">Github Personal Access Token</h4>
+        <p class="card-text">Generate your token at <a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreferrer">https://github.com/settings/tokens</a>. Make sure to select the Full "repo" scope for the token. After you set this token, refresh the Issue page that you were on.</p>
+        <input type="password" id="github-token" class="w-100 mb-2" placeholder="Github Personal Access Token"/>
+        <br/>
+        <h4 class="card-title">Organization Name</h4>
+        <p class="card-text">Case sensitive organization name on GitHub</p>
+        <input type="text" id="organization-name" class="w-100 mb-2" placeholder="Org name"/>
+        <br/>
+        <div class="text-end"><button class="btn btn-primary save-button" style="width:120px;">Save Settings</button></div>
+      </div>
+    </div>
+    
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
