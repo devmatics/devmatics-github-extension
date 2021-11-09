@@ -14,3 +14,11 @@ If you want to play around with the code:
 
 ## Notes
 Note that due to the way GitHub caches pages, you may need to open an issues page, and refresh the page again in order for this extension to be loaded.
+
+## Screenshots
+
+#### The Sidebar interface
+> ![image](https://user-images.githubusercontent.com/32055840/140892261-700bfbb2-0833-426a-b4bb-88926921147c.png)
+
+#### Creating a Linked Issue
+> ![image](https://user-images.githubusercontent.com/32055840/140892286-cd7d7cd7-5e33-43b8-8561-2175f4551465.png)
