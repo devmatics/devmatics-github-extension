@@ -122,8 +122,10 @@ function testTokenSucceeded(data)
 	}
 	else
 	{
+		$('.devmatics-has-token-org').hide();
 		$('#use-org-name').prop('disabled', true);
 		$('#use-org-name').prop('checked', false);
+		$('#only-this-owner').prop('checked', true);
 	}
 
 	$('.devmatics-has-token').show();

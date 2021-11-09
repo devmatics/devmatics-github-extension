@@ -1,5 +1,3 @@
-import "../css/options.css";
-
 function saveOptions() {
 	const token = $("#github-token").val();
 	const orgName = $("#organization-name").val();
