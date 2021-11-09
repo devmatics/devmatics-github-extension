@@ -1,0 +1,16 @@
+.devmatics-dialog {
+	background-color: transparent !important;
+	color: transparent;
+}
+
+.devmatics-dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.devmatics-dialog > * {
+	color: white;
+}
+
+.devmatics-create-linked-issue-choice {
+	width: 100%;
+}
