@@ -20,7 +20,11 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
         let url = details.url;
         debugger;
         if (url.match(issuesRegex)) {
-            chrome.tabs.executeScript(details.tabId, {file: "issues.bundle.js", runAt: 'document_end' });
+            chrome.tabs.executeScript(details.tabId, {file: "issues.bundle.js", runAt: 'document_end' }, () => {
+                if (chrome.runtime.lastError) {
+                    console.log(chrome.runtime.lastError.message);
+                }
+            });
         }
     }
 }, {

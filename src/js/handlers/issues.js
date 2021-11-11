@@ -296,7 +296,7 @@ function searchRepositories(searchText)
 function createLinkedIssue(repoName, issueTitle) {
 	const jsonBody = {
 		title: issueTitle,
-		body: `Parent Issue: [${window.location.href}](${window.location.href}])`,
+		body: `Parent Issue: [${window.location.href}](${window.location.href})`,
 	};
 
 	$.ajax({
